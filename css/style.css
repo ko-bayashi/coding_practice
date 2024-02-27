@@ -30,13 +30,14 @@ a {
   box-sizing: border-box;
   padding: 12px 14px;
   font-size: 12px;
+  cursor: pointer;
 }
 
 .btn .text {
   color: #ffffff;
 }
 
-.btn .text:hover {
+.btn:hover .text {
   color: #333;
   transition: 0.3s;
 }
@@ -241,3 +242,154 @@ tbody tr:nth-child(2n+1) {
   text-align: right;
 }
 
+/* TABのレスポンシブ対応 */
+@media screen and (max-width:1199px) {
+  .inner {
+    max-width: 97%;
+  }
+
+
+  /* keyvisual*/
+  .img {
+    background-image: url(../img/keyvisual/keyvisual.jpg);
+    background-position: center;
+  }
+
+  .keyvisual {
+    height: 530px;
+  }
+
+  .keyvisual .top--text {
+    bottom: 250px;
+  }
+
+  .keyvisual .down--text {
+    top: 250px;
+  }
+
+
+  /* work */
+  .work .flex {
+    display: block;
+  }
+
+  .work .text {
+    width: 100%;
+  }
+
+  .work .text h2 {
+    margin-top: 20px;
+  }
+
+  .work .down--text {
+    padding-bottom: 50px;
+  }
+
+
+  /* skills */
+  .skills .wrapper1 {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+
+  .skills a {
+    display: flex;
+  }
+
+  .skills .wrapper2 {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: center;
+  }
+}
+
+/* SPのレスポンシブ対応 */
+@media screen and (max-width:767px) {
+  .inner {
+    max-width: 97%;
+  }
+
+  /* ヘッダー */
+
+  .header nav {
+    align-items: center;
+  }
+
+  .btn {
+    padding: 0;
+    position: relative;
+  }
+
+  .btn,
+  .btn::before,
+  .btn::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    background: #333;
+  }
+
+  .btn::before {
+    content: '';
+    bottom: 8px;
+    position: absolute;
+  }
+
+  .btn::after {
+    content: '';
+    top: 8px;
+    position: absolute;
+  }
+
+  .btn .text {
+    display: none;
+  }
+
+
+  /* keyvisual*/
+  .keyvisual {
+    height: 430px;
+  }
+
+  .keyvisual .top--text {
+    bottom: 200px;
+    font-size: 40px;
+  }
+
+  .keyvisual .down--text {
+    top: 200px;
+    font-size: 30px;
+  }
+
+
+  /* plan */
+  .plan th {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .plan td {
+    font-size: 12px;
+  }
+
+
+  /* アイコン */
+  .sns {
+    width: 100%;
+    padding: 50px 0;
+  }
+
+  .sns .inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sns .inner .fab {
+    padding: 50px 0;
+  }
+}
